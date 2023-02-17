@@ -1,3 +1,4 @@
+//Choose Stations assignment 
 const stations = [
   ['Big Bear Donair', 10, 'restaurant'],
   ['Bright Lights Elementary', 50, 'school'],
@@ -22,3 +23,27 @@ function chooseStations (stations) {
 
 
 console.log(chooseStations(stations));
+
+
+//X marks the spot assignment
+const moves = ['north', 'north', 'west', 'west', 'north', 'east','north']  
+
+function finalPosition (moves) {
+  let sumY = 0
+  let sumX = 0
+
+  for (let i = 0; i < moves.length; i++) {
+    if (moves[i] === 'north') {
+      sumY = sumY + 1;
+    } else if (moves[i] === 'south') {
+      sumY = sumY - 1;
+    } else if (moves[i] === 'east') {
+      sumX = sumX + 1;
+    } else if (moves[i] === 'west') {
+      sumX = sumX -1
+    }
+
+  } return [sumX, sumY]
+}
+
+console.log(finalPosition(moves)) 
